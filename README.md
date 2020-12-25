@@ -1,4 +1,4 @@
-# Map app
+# Map App
 
 1. Click [here](https://casualjackie.github.io/map-app/) for open project
 2. Enter log/pass - admin/admin
@@ -6,7 +6,7 @@
 
 ### The test task consists of:
 * Login windows
-* Maps using google maps api
+* Map using google map api
 * Markers on the map, which are obtained by parsing from google tables
 
 ### Dependencies
@@ -15,6 +15,7 @@
 * react 17.0.1
 * react-dom 17.0.1
 * react-scripts 4.0.0
+* react-google-maps/api 2.0.2
 * web-vitals 0.2.4
 
 ### Installing
