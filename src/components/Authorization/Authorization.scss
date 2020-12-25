@@ -4,14 +4,27 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  width: 300px;
+  width: 366px;
 
   &__form {
     display: flex;
     flex-direction: column;
+
+    & :first-child {
+      margin-bottom: 3px;
+    }
   }
 
   &__item {
-    height: 30px;
+    height: 54px;
+    padding: 13px 15px;
+    border: 1px solid #1A73E8;
+    border-radius: 4px;
+    font-size: 16px;
+
+    &:focus,
+    &:active {
+      outline-color: #4285F4;
+    }
   }
 }

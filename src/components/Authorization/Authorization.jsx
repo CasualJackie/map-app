@@ -22,11 +22,14 @@ export const Authorization = ({ authorizationStatus }) => {
           className="authorization__item"
           onChange={event => setLogin(event.target.value)}
           type="text"
+          placeholder="Login"
         />
+
         <input
           className="authorization__item"
           onChange={event => setPassword(event.target.value)}
           type="text"
+          placeholder="Password"
         />
       </form>
     </div>
