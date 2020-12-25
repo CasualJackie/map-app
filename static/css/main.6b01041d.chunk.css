@@ -1,0 +1,2 @@
+*{box-sizing:border-box}body{margin:0;padding:0}.authorization{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:366px}.authorization__form{display:flex;flex-direction:column}.authorization__form :first-child{margin-bottom:3px}.authorization__item{height:54px;padding:13px 15px;border:1px solid #1a73e8;border-radius:4px;font-size:16px}.authorization__item:active,.authorization__item:focus{outline-color:#4285f4}
+/*# sourceMappingURL=main.6b01041d.chunk.css.map */
