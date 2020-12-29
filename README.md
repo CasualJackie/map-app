@@ -16,6 +16,7 @@
 * react-dom 17.0.1
 * react-scripts 4.0.0
 * react-google-maps/api 2.0.2
+* papaparse 5.3.0
 * web-vitals 0.2.4
 
 ### Installing

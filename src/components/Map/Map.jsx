@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Map.scss';
-import {
-  GoogleMap,
-  LoadScript,
-  Marker,
-} from '@react-google-maps/api';
+import { GoogleMap, LoadScript } from '@react-google-maps/api';
+import Papa from 'papaparse';
+import places from '../../data/places.csv';
 import { GOOGLE_MAP_API_KEY } from '../../api/getKey';
+import { Point } from '../Point/Point';
 
 const containerStyle = {
   width: '100vw',
@@ -13,28 +12,42 @@ const containerStyle = {
 };
 
 const center = {
-  lat: 46.482525,
-  lng: 30.723309,
+  lat: 24.30578,
+  lng: 54.539402,
 };
 
-export const Map = () => (
-  <div className="container">
-    <LoadScript
-      googleMapsApiKey={GOOGLE_MAP_API_KEY}
-    >
-      <GoogleMap
-        mapContainerStyle={containerStyle}
-        center={center}
-        zoom={8}
+export const Map = () => {
+  const [rows, setRows] = useState([]);
+
+  useEffect(() => {
+    Papa.parse(places, {
+      download: true,
+      complete(rowsFromFile) {
+        const result = rowsFromFile.data.map(
+          (row, index) => [...row, index],
+        );
+
+        result.splice(0, 1);
+        setRows(result);
+      },
+    });
+  }, []);
+
+  return (
+    <div>
+      <LoadScript
+        googleMapsApiKey={GOOGLE_MAP_API_KEY}
       >
-        { /* Child components, such as markers, info windows, etc. */ }
-        <Marker
-          position={{
-            lat: 46.482525, lng: 30.723309,
-          }}
-          title="hello world"
-        />
-      </GoogleMap>
-    </LoadScript>
-  </div>
-);
+        <GoogleMap
+          mapContainerStyle={containerStyle}
+          center={center}
+          zoom={7}
+        >
+          {rows.map(marker => (
+            <Point key={marker[11]} marker={marker} />
+          ))}
+        </GoogleMap>
+      </LoadScript>
+    </div>
+  );
+};
