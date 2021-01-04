@@ -1,6 +1,6 @@
 import React from 'react';
-import './Logout.scss';
 import { LogoutShape } from '../../shapes/LogoutShape';
+import './Logout.scss';
 
 export const Logout = ({ exit }) => (
   <div className="logout">

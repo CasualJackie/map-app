@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import './Map.scss';
-import { GoogleMap, LoadScript } from '@react-google-maps/api';
 import Papa from 'papaparse';
-import places from '../../data/places.csv';
+import { GoogleMap, LoadScript } from '@react-google-maps/api';
 import { GOOGLE_MAP_API_KEY } from '../../api/getKey';
+import places from '../../data/places.csv';
 import { Point } from '../Point/Point';
+import './Map.scss';
 
 const containerStyle = {
   width: '100vw',

@@ -1,7 +1,7 @@
 import React, { useState, memo, useCallback } from 'react';
-import './Point.scss';
 import { Marker, InfoWindow } from '@react-google-maps/api';
 import { PointShape } from '../../shapes/PointShape';
+import './Point.scss';
 
 export const Point = memo(({ marker }) => {
   const [isOpen, setIsOpen] = useState(false);

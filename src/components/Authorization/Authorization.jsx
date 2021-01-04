@@ -1,6 +1,6 @@
 import React, { useState, memo, useCallback } from 'react';
-import './Authorization.scss';
 import { AuthorizationShape } from '../../shapes/AuthorizationShape';
+import './Authorization.scss';
 
 export const Authorization = memo(({ authorizationStatus }) => {
   const [login, setLogin] = useState('');
