@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
+import { Logout } from 'components/Logout/Logout';
+import { Authorization } from 'components/Authorization/Authorization';
+import { Map } from 'components/Map/Map';
 import './App.scss';
-import { Logout } from './components/Logout/Logout';
-import { Authorization } from './components/Authorization/Authorization';
-import { Map } from './components/Map/Map';
 
 export const App = () => {
   const [authorization, setAuthorization] = useState(false);

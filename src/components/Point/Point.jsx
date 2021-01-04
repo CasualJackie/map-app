@@ -1,6 +1,6 @@
 import React, { useState, memo, useCallback } from 'react';
 import { Marker, InfoWindow } from '@react-google-maps/api';
-import { PointShape } from '../../shapes/PointShape';
+import { PointShape } from 'shapes/PointShape';
 import './Point.scss';
 
 export const Point = memo(({ marker }) => {

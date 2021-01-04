@@ -1,5 +1,5 @@
 import React, { useState, memo, useCallback } from 'react';
-import { AuthorizationShape } from '../../shapes/AuthorizationShape';
+import { AuthorizationShape } from 'shapes/AuthorizationShape';
 import './Authorization.scss';
 
 export const Authorization = memo(({ authorizationStatus }) => {

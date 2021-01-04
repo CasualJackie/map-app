@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Papa from 'papaparse';
 import { GoogleMap, LoadScript } from '@react-google-maps/api';
-import { GOOGLE_MAP_API_KEY } from '../../api/getKey';
-import places from '../../data/places.csv';
-import { Point } from '../Point/Point';
+import places from 'data/places.csv';
+import { Point } from 'components/Point/Point';
 import './Map.scss';
 
 const containerStyle = {
@@ -36,7 +35,7 @@ export const Map = () => {
   return (
     <div>
       <LoadScript
-        googleMapsApiKey={GOOGLE_MAP_API_KEY}
+        googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAP_API_KEY}
       >
         <GoogleMap
           mapContainerStyle={containerStyle}

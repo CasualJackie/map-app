@@ -1,5 +1,5 @@
 import React from 'react';
-import { LogoutShape } from '../../shapes/LogoutShape';
+import { LogoutShape } from 'shapes/LogoutShape';
 import './Logout.scss';
 
 export const Logout = ({ exit }) => (
